@@ -1,0 +1,22 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Scan output
+output/
+*.json
+!requirements.json
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
