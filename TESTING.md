@@ -175,3 +175,8 @@ The mock-based tests (test_*_mocked) do not send any network traffic.
 They patch socket.socket to simulate connect_ex return values, making
 them fast, deterministic, and safe to run in CI.
 
+## Reproducibility Check
+
+Cloned the repo into a fresh directory, created a new venv, ran `pip install -r requirements.txt` and `pytest`. 
+Result: 18 passed in 1.28s 
+The project is fully reproducible from a clean clone.
