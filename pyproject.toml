@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "portscanner"
+dynamic = ["version"]
+description = "TCP connect, SYN and UDP port scanner for authorized security testing"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+# Only the SYN scan needs scapy; TCP connect and UDP use the standard library.
+syn = ["scapy>=2.5"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+portscan = "portscanner.cli:main"
+
+[tool.setuptools]
+packages = ["portscanner"]
+
+[tool.setuptools.dynamic]
+version = { attr = "portscanner.__version__" }

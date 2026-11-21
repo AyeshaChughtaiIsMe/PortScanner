@@ -1,0 +1,3 @@
+# Runtime. TCP connect and UDP scans use only the standard library;
+# scapy is needed for --scan-type syn.
+scapy>=2.5
